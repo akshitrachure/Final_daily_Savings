@@ -1,0 +1,110 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+{% block userdefined %}
+                
+                
+               <style>
+               #c1{
+                padding-left: 10%;
+                padding-right: 10%;
+               
+               }
+              
+               </style>
+   
+        
+        
+        
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">HOME<span class="sr-only">(current)</span></a>
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+              <a class="nav-item nav-link active" href="/home/adminlogin/">ADMIN <i class="fas fa-user"></i><span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link active " href="/home/logins/"> LOGIN <span class="sr-only">(current)</span></a>
+       
+              <a class="nav-item nav-link active" href="/home/registers/">SIGNUP <i class="fas fa-user"></i><span class="sr-only">(current)</span></a>
+              
+        </div>
+        
+    
+          </div>
+        </div>
+        </nav>
+        {% if messages %} 
+        {% for message in messages %}
+        <center>
+            <!-- <div class="alert {% if message.tags %} alert-{{message.tags}}{% endif %}" role="alert"> -->
+            <div class="alert alert-primary" role="alert">
+                <b><i>{{ message }}</i></b>
+            </div>
+        </center>
+        {% endfor %}
+        {% endif %}
+      <br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+         <p class="h1 text-uppercase mb- text-center text-info">ABOUT US</p> 
+           
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+<br> <br>
+<div class="container" id="c1">
+  <form action="/action_page.php">
+    <div class="form-group"> 
+      <ul>
+        <h5><p></p> This project implements a daily savings application in which user can save his/her money in our application online from anywhere instead of standing in queue in banks which saves a lot of time and effort.
+	If you are a new user then go to sign up page and fill in your details and if you are already a user then login with your username and password, then it will redirect you to the page where you can enter the money you want to save and also specify the deadline for retrieving that amount.</p> 
+      <br>
+    <p>In the next page, we will let you know the remaining days and the amount you saved till date and you can pay the amount we specified or you can even modify it. You can also check your transactions done till now.
+  
+    	After entering your card details, you will receive an OTP to your registered mobile number. After confirmation of your OTP your payment will be successful.</p>	
+      <br>
+    <p>	 	You can also pay the money any number of times a day, and the balance amount to be paid will be modified accordingly.
+    
+    If you are unable to reach your goal before deadline, then you can extend the deadline, but 2% of amount will be deducted
+    	Once you reach the goal within deadline, then you’ll be notified and a bonus of 12% of amount you saved will be credited to you.</p>	 </h5>	
+    </ul>
+     <p> <center> <b> <h4> HAPPY SAVINGS </h4> </b></center></p>
+  </div>
+  </form>
+
+</div>
+</div>
+<p> <center> <b><h4> *Thanks for visiting this site *</h4></b></center> </p>
+          
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-item nav-link active" href="/home/contactus/">Contact US<span class="sr-only">(current)</span></a>
+              </div>
+              </li>
+              
+                 
+                </div>
+              </div>
+            </nav>
+           
+     
+  </div>
+     
+    </div>
+  </div>
+</nav>
+
+{% endblock %}

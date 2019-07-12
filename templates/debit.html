@@ -1,0 +1,39 @@
+{% extends 'base/layout.html' %} {% load static %} {% block userdefined %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/home/login2/">Back <span class="sr-only">(current)</span></a>
+            </li>
+                    
+                       
+            </div>
+            </div>
+</nav>    
+
+       
+<div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <!-- <img src="/static/logo.png" alt="image not found" width="200" height="200" class="ml-5"> -->
+                <p class="h2 text-uppercase mb- text-center text-info">Debit</p>
+                <form method="POST" >
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+                        <label for="money">Amount :</label>
+                        <input id="money" type="number" class="form-control" name="money" min="1" placeholder="Amount">
+                    </div>
+                   
+                   
+                    <input type="submit" name="confirm" class="btn btn-info btn-block" value="Confirm">
+                    
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+ {% endblock %}

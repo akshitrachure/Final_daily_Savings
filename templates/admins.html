@@ -1,0 +1,74 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+{% block userdefined %}
+<style>
+.container{
+    padding-top: 50px;
+}
+
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/home/">Back <span class="sr-only">(current)</span></a>
+        </li>
+        
+           
+          </div>
+        </div>
+      </nav>
+   
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <!-- <img src="/static/logo.png" alt="image not found" width="200" height="200" class="ml-5"> -->
+            <p class="h2 text-uppercase mb- text-center text-info">Admin</p>
+            <form method="POST" >
+                {% csrf_token %}
+                
+                    <div class="container">
+                      <center>
+
+                  
+                      <table class = "table table-bordered table-sm" border="2">
+                        <thead class = "thead-light">
+                          <tr>
+                            <th> <center> Username </center></th>
+                            <th><center>Money_to_be_saved</center></th>
+                            <th><center>Deadline</center></th>
+                            <th><center>Paid_Amount</center></th>
+                            <th><center>Remaining_days</center></th>
+             
+                          </tr>
+                        </thead>
+                  
+                        {% for data in user %}
+                                  <tr>
+                                    <td> <center>{{data.username}} </center></td>
+                                    <td> <center> {{data.money_to_be_saved}}</center></td>
+                                    <td> <center> {{data.deadline}}</center></td>
+                                    <td> <center> {{data.paid_sum}}</center></td>
+                                    <td> <center> {{data.remaining_days}}</center></td>
+                                  </tr>
+                        {% endfor %}
+                      </table>
+                    </center><br><br><br><br><br><br><br><br><br><br><br>
+                      
+                    </div>
+                <!-- {% if messages %}
+                {% for r in messages %}
+                <div class="alert alert-primary" role="alert">
+                     {{r}}
+                </div>
+                {% endfor %}
+                {% endif %} -->
+                
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}
